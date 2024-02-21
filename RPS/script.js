@@ -45,8 +45,7 @@ valasztasok.forEach((kep, index) => {
         };
 
         let vegeredmenyErtek = vegeredmeny[jatekosSzimbolum + szamitogepSzimbolum];
-        //jatekosJelenlegiPontok = 0,
-        //szamitogepJelenlegiPontok = 0;
+        
         
         if (vegeredmenyErtek === "Nyertél") {
             document.getElementById("user-score").innerHTML = parseInt(document.getElementById("user-score").innerHTML)+1;
@@ -55,7 +54,8 @@ valasztasok.forEach((kep, index) => {
         }
         
         
-        eredmeny.textContent = jatekosSzimbolum === szamitogepSzimbolum ? "Döntetlen" : `Te ${vegeredmenyErtek}!`;
+        eredmeny.textContent = jatekosSzimbolum === szamitogepSzimbolum ? "Döntetlen!" : `${vegeredmenyErtek}!`;
+        eredmeny.style.color = jatekosSzimbolum === szamitogepSzimbolum ? "black" : vegeredmenyErtek === "Nyertél" ? "rgb(43, 232, 0)" : "red";
     });
 });
 

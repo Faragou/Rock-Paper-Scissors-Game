@@ -6,17 +6,41 @@
 }
 
 body{
-    height: 100vh;
+    background-image: url(https://wallpapershome.com/images/wallpapers/macos-big-sur-1280x720-dark-wwdc-2020-22655.jpg);
+    background-size: cover;
+    background-position: center;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background: rgba(78, 231, 236, 0.521);
+    align-items: center;
+    flex-direction: column;
+    padding: 2em;
+    width: 100%;
+    height: 100vh;
+    @media screen and (max-width: 480px) {
+    padding: 0.8em;
 }
+}
+
+.video-bg {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+    video {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+    }
+}
+
+
 .container{
     position: relative;
     padding: 5rem 15rem;
     border-radius: 10px;
-    background: #ffffff;
+    background: #2e2525a9;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -24,6 +48,7 @@ body{
     display: flex;
     column-gap: 7rem;
     margin-top: 1rem;
+    mix-blend-mode: multiply;
 }
 
 .result_images img{
@@ -35,7 +60,7 @@ body{
 .result{
     text-align: center;
     font-size: 2rem;
-    color: rgb(0, 0, 255);
+    color: rgb(255, 255, 255);
     margin-top: 1.5rem;
 }
 
@@ -44,11 +69,32 @@ body{
     margin-top: 2.5rem;
     align-items: center;
     justify-content: space-between;
+    mix-blend-mode: multiply; 
+    
 }
 
 .option_image img{
-    width: 75px;
+    width: 120px;
+    padding: auto;
+    mix-blend-mode: multiply;
+    
 }
+
+.options{
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    margin-right: 0;
+    padding: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+
 .option_image {
     display: flex;
     flex-direction: column;
@@ -59,6 +105,8 @@ body{
     opacity: 0.5;
     cursor: pointer;
     transition: opacity 0.3s ease-in-out;
+    
+    
 }
 .option_image:hover{
 opacity: 1;
@@ -69,9 +117,10 @@ opacity: 1;
 .option_image img{
 pointer-events: none;
 }
+
 .user_score, .computer_score{
-    font-size: 1.5rem;
-    color: rgb(0, 0, 255);
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
     margin-top: 1.5rem;
 }
 
@@ -83,7 +132,7 @@ pointer-events: none;
     margin-right: 2rem; 
     background-color: #4e4caf; 
     border: none;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 10px 20px; 
     font-size: 25px; 
     cursor: pointer;
@@ -101,8 +150,12 @@ pointer-events: none;
   }
 
 .option_image p{
-    color: rgb(155, 0, 0);
-    font-size: 2rem;
-    margin-top: 1rem;
+    color: #ffffff ; 
+    text-shadow: 1px 1px 1px rgb(255, 255, 255); 
+    font-size: 3rem;
+    margin-top: 2rem;
     pointer-events: none;
+    
 }
+
+
